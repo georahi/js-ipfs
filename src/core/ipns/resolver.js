@@ -74,7 +74,7 @@ class IpnsResolver {
 
   // resolve ipns entries from the provided routing
   async _resolveName (name) {
-    const peerId = PeerId.createFromB58String(name)
+    const peerId = PeerId.createFromCID(name)
     const { routingKey } = ipns.getIdKeys(peerId.toBytes())
     let record
 
